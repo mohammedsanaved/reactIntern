@@ -8,6 +8,7 @@ export interface Post {
 }
 
 export interface Check {
+  [x: string]: any;
   handleChange1: React.ChangeEvent<HTMLInputElement>;
   handleChange2: React.ChangeEvent<HTMLInputElement>;
   handleChange3: React.ChangeEvent<HTMLInputElement>;

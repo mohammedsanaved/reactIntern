@@ -2,19 +2,19 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import { Check } from "./PostModel";
+
 const SecondTable1 = () => {
   const [checked, setChecked] = React.useState([true, false]);
 
-  const handleChange1 = (event: Check) => {
+  const handleChange1 = (event: { target: { checked: boolean } }) => {
     setChecked([event.target.checked, event.target.checked]);
   };
 
-  const handleChange2 = (event) => {
+  const handleChange2 = (event: { target: { checked: boolean } }) => {
     setChecked([event.target.checked, checked[1]]);
   };
 
-  const handleChange3 = (event) => {
+  const handleChange3 = (event: { target: { checked: boolean } }) => {
     setChecked([checked[0], event.target.checked]);
   };
 

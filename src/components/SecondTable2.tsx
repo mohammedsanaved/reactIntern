@@ -6,7 +6,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 const SecondTable2 = () => {
   const [checked, setChecked] = React.useState([true, false, false]);
 
-  const handleChange1 = (event) => {
+  const handleChange1 = (event: { target: { checked: any } }) => {
     const newChecked = [
       event.target.checked,
       event.target.checked,
@@ -15,17 +15,17 @@ const SecondTable2 = () => {
     setChecked(newChecked);
   };
 
-  const handleChange2 = (event) => {
+  const handleChange2 = (event: { target: { checked: any } }) => {
     const newChecked = [event.target.checked, checked[1], checked[2]];
     setChecked(newChecked);
   };
 
-  const handleChange3 = (event) => {
+  const handleChange3 = (event: { target: { checked: any } }) => {
     const newChecked = [checked[0], event.target.checked, checked[2]];
     setChecked(newChecked);
   };
 
-  const handleChange4 = (event) => {
+  const handleChange4 = (event: { target: { checked: any } }) => {
     const newChecked = [checked[0], checked[1], event.target.checked];
     setChecked(newChecked);
   };
