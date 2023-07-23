@@ -1,8 +1,8 @@
-import * as React from "react";
+import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Box from "@mui/material/Box";
-import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { Post } from "./PostModel"; // Import the Post model
 import SecoundTable1 from "./SecondTable1";
 import SecondTable2 from "./SecondTable2";
