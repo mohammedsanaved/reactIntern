@@ -30,16 +30,18 @@ const SecondTable1 = () => {
           />
         }
       />
-      <Box sx={{ display: "flex", flexDirection: "column", ml: 3 }}>
-        <FormControlLabel
-          label="support"
-          control={<Checkbox checked={checked[0]} onChange={handleChange2} />}
-        />
-        <FormControlLabel
-          label="customer_success"
-          control={<Checkbox checked={checked[1]} onChange={handleChange3} />}
-        />
-      </Box>
+      {checked[0] && ( // Render "support" and "customer_success" checkboxes only if "customer_service" is checked
+        <Box sx={{ display: "flex", flexDirection: "column", ml: 3 }}>
+          <FormControlLabel
+            label="support"
+            control={<Checkbox checked={checked[0]} onChange={handleChange2} />}
+          />
+          <FormControlLabel
+            label="customer_success"
+            control={<Checkbox checked={checked[1]} onChange={handleChange3} />}
+          />
+        </Box>
+      )}
     </div>
   );
 };

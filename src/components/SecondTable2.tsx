@@ -46,20 +46,22 @@ const SecondTable2 = () => {
           />
         }
       />
-      <Box sx={{ display: "flex", flexDirection: "column", ml: 3 }}>
-        <FormControlLabel
-          label="graphic_design"
-          control={<Checkbox checked={checked[0]} onChange={handleChange2} />}
-        />
-        <FormControlLabel
-          label="product_design"
-          control={<Checkbox checked={checked[1]} onChange={handleChange3} />}
-        />
-        <FormControlLabel
-          label="web_design"
-          control={<Checkbox checked={checked[2]} onChange={handleChange4} />}
-        />
-      </Box>
+      {checked[0] && (
+        <Box sx={{ display: "flex", flexDirection: "column", ml: 3 }}>
+          <FormControlLabel
+            label="graphic_design"
+            control={<Checkbox checked={checked[0]} onChange={handleChange2} />}
+          />
+          <FormControlLabel
+            label="product_design"
+            control={<Checkbox checked={checked[1]} onChange={handleChange3} />}
+          />
+          <FormControlLabel
+            label="web_design"
+            control={<Checkbox checked={checked[2]} onChange={handleChange4} />}
+          />
+        </Box>
+      )}
     </div>
   );
 };
