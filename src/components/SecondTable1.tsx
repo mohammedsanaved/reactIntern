@@ -4,7 +4,7 @@ import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 
 const SecondTable1 = () => {
-  const [checked, setChecked] = React.useState([true, false]);
+  const [checked, setChecked] = React.useState([false, false]);
 
   const handleChange1 = (event: { target: { checked: boolean } }) => {
     setChecked([event.target.checked, event.target.checked]);
